@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Digital Goods Marketplace</title>
+</head>
+<body>
+
+<header class="header">
+    <a href="/" class="logo">
+        <img src="img/logo.svg" alt="Digital Goods Marketplace">
+    </a>
+
+    <form role="search" class="search-form" id="search-form">
+        <label for="search-input" class="visually-hidden">Search products</label>
+        <input type="search" id="search-input" class="search-form__input" placeholder="Search for icons, fonts...">
+        <button type="submit" class="search-form__button">Search</button>
+    </form>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="/categories.html">Categories</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/login.html">Log In</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main-content">
+    <aside class="sidebar">
+        <nav class="category-nav" aria-label="Product Categories">
+            <h3>Categories</h3>
+            <ul id="category-filters">
+                <li>
+                    <button data-category="all" class="active">All</button>
+                </li>
+                <li>
+                    <button data-category="icons">Icons</button>
+                </li>
+                <li>
+                    <button data-category="fonts">Fonts</button>
+                </li>
+                <li>
+                    <button data-category="templates">Templates</button>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <section class="products-section" aria-labelledby="products-heading">
+        <h2 id="products-heading" class="visually-hidden">Product List</h2>
+        <div id="items-grid" class="products-grid">
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 Digital Goods Marketplace. All rights reserved.</p>
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+        </ul>
+    </nav>
+</footer>
+
+<template id="item-card-template">
+    <div class="card">
+        <img src="" alt="" class="card__image">
+        <div class="card__content">
+            <h3 class="card__title"></h3>
+            <p class="card__author"></p>
+            <div class="card__footer">
+                <span class="card__price"></span>
+                <a href="#" class="card__button">View</a>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script src="js/app.js" defer></script>
+</body>
+</html>
