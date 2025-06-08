@@ -1,0 +1,60 @@
+// scss/_layout.scss
+
+// Общий контейнер, чтобы контент не растягивался на всю ширину
+.container {
+  max-width: $container-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 ($spacing-unit * 1.5);
+}
+
+.header {
+  @extend .container; // Наследуем стили контейнера
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: $spacing-unit;
+  padding-bottom: $spacing-unit;
+  border-bottom: 1px solid $border-color;
+}
+
+.main-content {
+  @extend .container;
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: 240px 1fr; // Левая колонка 240px, правая занимает остальное место
+  gap: ($spacing-unit * 2);
+  padding-top: ($spacing-unit * 2);
+  padding-bottom: ($spacing-unit * 2);
+}
+
+.sidebar {
+  background: #000;
+  // стили для сайдбара, если нужны
+}
+
+.products-section {
+
+  background: #29501a;
+  // стили для секции с товарами, если нужны
+}
+
+.products-grid {
+  display: grid;
+  // Магия: создаем столько колонок, сколько поместится,
+  // каждая минимум 280px шириной.
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: ($spacing-unit * 1.5);
+}
+
+.footer {
+  @extend .container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: ($spacing-unit * 2);
+  padding-bottom: ($spacing-unit * 2);
+  margin-top: ($spacing-unit * 2);
+  border-top: 1px solid $border-color;
+  color: $secondary-text-color;
+}

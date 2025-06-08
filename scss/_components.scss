@@ -1,0 +1,105 @@
+// scss/_components.scss
+
+// === Карточка товара ===
+.card {
+  background-color: $card-bg-color;
+  border-radius: $border-radius;
+  box-shadow: $card-shadow;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 16 / 10; // Сохраняем пропорции картинки
+    object-fit: cover;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+
+  &__content {
+    padding: ($spacing-unit * 1.5);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; // Растягиваем контент, чтобы футер был всегда внизу
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    margin-bottom: $spacing-unit / 2;
+  }
+
+  &__author {
+    color: $secondary-text-color;
+    margin-bottom: $spacing-unit;
+    flex-grow: 1; // Занимает всё доступное место, отодвигая футер вниз
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $border-color;
+    padding-top: $spacing-unit;
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  &__button {
+    background-color: $primary-color;
+    color: white;
+    padding: ($spacing-unit / 2) $spacing-unit;
+    border-radius: 5px;
+    font-weight: bold;
+
+    &:hover {
+      background-color: $primary-color-dark;
+      text-decoration: none;
+    }
+  }
+}
+
+// === Форма поиска ===
+.search-form {
+  display: flex;
+
+  &__input {
+    padding: ($spacing-unit / 2) $spacing-unit;
+    border: 1px solid $border-color;
+    border-radius: $border-radius 0 0 $border-radius;
+    min-width: 300px;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+    }
+  }
+
+  &__button {
+    padding: 0 ($spacing-unit * 1.5);
+    border: none;
+    background-color: $primary-color;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 $border-radius $border-radius 0;
+
+    &:hover {
+      background-color: $primary-color-dark;
+    }
+  }
+}
+
+.main-nav{
+  ul {
+    display: flex;
+    column-gap: $spacing-unit;
+  }
+}

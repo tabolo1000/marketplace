@@ -1,0 +1,25 @@
+// scss/_variables.scss
+
+// === Цветовая палитра ===
+$primary-color: #4A90E2;      // Основной цвет для акцентов, кнопок, ссылок
+$primary-color-dark: #357ABD; // Для ховера на кнопках
+$text-color: #333;           // Основной цвет текста
+$secondary-text-color: #777; // Для второстепенного текста (автор, категории)
+$bg-color: #F8F9FA;          // Цвет фона страницы
+$card-bg-color: #FFFFFF;     // Цвет фона карточек
+$border-color: #EAECEF;      // Цвет рамок
+
+// === Типографика ===
+$font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.6;
+
+// === Макет ===
+$container-width: 1400px;
+$spacing-unit: 1rem; // Базовая единица отступа (16px)
+$border-radius: 8px;
+$card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+// === Точки перелома (Breakpoints) для адаптивности ===
+$breakpoint-md: 768px; // Планшеты
+$breakpoint-lg: 1024px; // Ноутбуки
